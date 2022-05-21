@@ -24,7 +24,7 @@ namespace AddressBook
             int Num = Convert.ToInt32(Console.ReadLine());
             ArrayList contact = new ArrayList();
 
-            for (int i = 0; i <= Num; i++)
+            for (int i = 1; i <= Num; i++)
             {
                 Console.WriteLine("\nAdd Details of the person: " + i);
 
@@ -68,7 +68,7 @@ namespace AddressBook
             int count = 1;
             foreach (var item in contact)
             {
-                if (j % 7 == 0)
+                if (j % 8 == 0)
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("\n");
