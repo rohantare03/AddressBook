@@ -9,24 +9,16 @@ namespace AddressBook
 {
     internal class ContactDetails
     {
-        public string FirstName;
-        public string LastName;
-        public string Address;
-        public string City;
-        public string State;
-        public int Zip;
-        public long PhoneNumber;
-        public string Email;
-
-        public void AddContacts() 
+        ArrayList contact = new ArrayList();
+        public void AddingContacts()
         {
             Console.WriteLine("Enter number of Contacts:");
             int Num = Convert.ToInt32(Console.ReadLine());
-            ArrayList contact = new ArrayList();
+
 
             for (int i = 1; i <= Num; i++)
             {
-                Console.WriteLine("\nAdd Details of the person: " + i);
+                Console.WriteLine("Add Details of the person: " + i);
 
                 Console.WriteLine("Enter the First Name:");
                 string FirstName = Console.ReadLine();
@@ -47,10 +39,10 @@ namespace AddressBook
                 string Email = Console.ReadLine();
 
                 Console.WriteLine("Enter the Zipcode:");
-                int Zip = Convert.ToInt32(Console.ReadLine());
+                string Zip = Console.ReadLine();
 
                 Console.WriteLine("Enter the phone number:");
-                long PhoneNumber = Convert.ToInt64(Console.ReadLine());
+                string PhoneNumber = Console.ReadLine();
 
                 contact.Add(FirstName);
                 contact.Add(LastName);
@@ -88,6 +80,99 @@ namespace AddressBook
             }
 
 
+
+        }
+
+
+        public void EditContact() 
+        {
+            Console.WriteLine("\nEnter the Name whose data you want to change");
+            string Firstname = Console.ReadLine();
+            for (int i = 0; i < contact.Count; i += 8)
+            {
+                if (String.Equals(Firstname, (contact[i])))
+                {
+                    Console.WriteLine("Name:" + contact + "==" + contact[i]);
+                    Console.WriteLine("Press 1: for first name");
+                    Console.WriteLine("Press 2: for last name name");
+                    Console.WriteLine("Press 3: for Address");
+                    Console.WriteLine("Press 4: for city name");
+                    Console.WriteLine("Press 5: for state name");
+                    Console.WriteLine("Press 6: for Email ID");
+                    Console.WriteLine("Press 7: for ZIP number");
+                    Console.WriteLine("Press 8: for phone number");
+
+                    int check = Convert.ToInt32(Console.ReadLine());
+                    switch (check)
+                    {
+                        case 1:
+                            Console.WriteLine("Enter your correct first name");
+                            string FirstName = Console.ReadLine();
+                            contact[i] = FirstName;
+                            break;
+                        case 2:
+                            Console.WriteLine("Enter your correct last name");
+                            string LastName = Console.ReadLine();
+                            contact[i + 1] = LastName;
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter your correct Address");
+                            string Address = Console.ReadLine();
+                            contact[i + 2] = Address;
+                            break;
+                        case 4:
+                            Console.WriteLine("Enter your correct city name");
+                            string City = Console.ReadLine();
+                            contact[i + 3] = City;
+                            break;
+                        case 5:
+                            Console.WriteLine("Enter your correct state name");
+                            string State = Console.ReadLine();
+                            contact[i + 4] = State;
+                            break;
+                        case 6:
+                            Console.WriteLine("Enter your correct EmailID");
+                            string EmailID = Console.ReadLine();
+                            contact[i + 5] = EmailID;
+                            break;
+                        case 7:
+                            Console.WriteLine("Enter your correct ZIP number");
+                            string ZIP = Console.ReadLine();
+                            contact[i + 6] = ZIP;
+                            break;
+                        case 8:
+                            Console.WriteLine("Enter your correct Phone number");
+                            string PhoneNumber = Console.ReadLine();
+                            contact[i + 7] = PhoneNumber;
+                            break;
+
+                        default:
+                            Console.WriteLine("Please enter a valid input");
+                            break;
+
+                    }
+                }
+            }
+            int j = 0;
+            int count = 1;
+            foreach (var item in contact)
+            {
+                if (j % 8 == 0)
+                {
+                    Console.WriteLine("\nNumber of person :" + count);
+                    Console.WriteLine("FirstName: " + contact[j]);
+                    Console.WriteLine("LastName: " + contact[j + 1]);
+                    Console.WriteLine("Address : " + contact[j + 2]);
+                    Console.WriteLine("City: " + contact[j + 3]);
+                    Console.WriteLine("State: " + contact[j + 4]);
+                    Console.WriteLine("Email: " + contact[j + 5]);
+                    Console.WriteLine("ZipCode: " + contact[j + 6]);
+                    Console.WriteLine("Phone Number: " + contact[j + 7]);
+                    count++;
+
+                }
+                j++;
+            }
 
         }
     }
