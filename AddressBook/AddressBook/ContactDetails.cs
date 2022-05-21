@@ -73,14 +73,15 @@ namespace AddressBook
                     Console.WriteLine("\n");
                     Console.WriteLine("\n");
 
-                    Console.WriteLine("\nAddress of person :" + count);
+                    Console.WriteLine("\nNumber of person :" + count);
                     Console.WriteLine("FirstName: " + contact[j]);
                     Console.WriteLine("LastName: " + contact[j + 1]);
-                    Console.WriteLine("City: " + contact[j + 2]);
-                    Console.WriteLine("State: " + contact[j + 3]);
-                    Console.WriteLine("Email: " + contact[j + 4]);
-                    Console.WriteLine("ZipCode: " + contact[j + 5]);
-                    Console.WriteLine("Phone Number: " + contact[j + 6]);
+                    Console.WriteLine("Address : " + contact[j + 2]);
+                    Console.WriteLine("City: " + contact[j + 3]);
+                    Console.WriteLine("State: " + contact[j + 4]);
+                    Console.WriteLine("Email: " + contact[j + 5]);
+                    Console.WriteLine("ZipCode: " + contact[j + 6]);
+                    Console.WriteLine("Phone Number: " + contact[j + 7]);
                     count++;
                 }
                 j++;
