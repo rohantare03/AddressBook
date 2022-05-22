@@ -5,8 +5,8 @@ namespace AddressBook
     {
         public static void Main(string[] args)
         {
-            ContactDetails contactDetail = new ContactDetails();
-            contactDetail.AddContacts();
+            ContactDetails contactDetails = new ContactDetails();
+            contactDetails.AddMultipleContact();
         }
 
     }

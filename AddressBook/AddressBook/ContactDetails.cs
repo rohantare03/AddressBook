@@ -9,14 +9,17 @@ namespace AddressBook
 {
     internal class ContactDetails
     {
+
         ArrayList contacts = new ArrayList();
-        public void AddContacts()
+      
+        public void AddMultipleContact()  
         {
             Console.WriteLine("Enter number of Contacts:");
             int Num = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 1; i <= Num; i++)
             {
+
                 Console.WriteLine("Enter the First Name:");
                 string FirstName = Console.ReadLine();
 
@@ -77,8 +80,6 @@ namespace AddressBook
             }
 
         }
-
     }
 }
 
-       
