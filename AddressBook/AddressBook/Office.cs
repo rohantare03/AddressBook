@@ -14,12 +14,9 @@ namespace AddressBook
         {
             Console.WriteLine("Enter number of Contacts:");
             int Num = Convert.ToInt32(Console.ReadLine());
-
-
             for (int i = 1; i <= Num; i++)
             {
                 Console.WriteLine("Add Details of the person: " + i);
-
                 Console.WriteLine("Enter the First Name:");
                 string FirstName = Console.ReadLine();
 
@@ -43,7 +40,6 @@ namespace AddressBook
 
                 Console.WriteLine("Enter the phone number:");
                 string PhoneNumber = Console.ReadLine();
-
                 contact.Add(FirstName);
                 contact.Add(LastName);
                 contact.Add(Address);
@@ -54,9 +50,8 @@ namespace AddressBook
                 contact.Add(PhoneNumber);
             }
         }
-        public void OfficeView()
+        public void DisplayContacts() 
         {
-
             int j = 0;
             int count = 1;
             foreach (var item in contact)
@@ -65,7 +60,6 @@ namespace AddressBook
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("\n");
-
                     Console.WriteLine("\nNumber of person :" + count);
                     Console.WriteLine("FirstName: " + contact[j]);
                     Console.WriteLine("LastName: " + contact[j + 1]);
@@ -79,10 +73,7 @@ namespace AddressBook
                 }
                 j++;
             }
-
         }
-
-
         public void EditContact()
         {
             Console.WriteLine("\nEnter the Name whose data you want to change");
@@ -131,48 +122,25 @@ namespace AddressBook
                             break;
                         case 6:
                             Console.WriteLine("Enter your correct EmailID");
-                            string EmailID = Console.ReadLine();
-                            contact[i + 5] = EmailID;
+                            string Email = Console.ReadLine();
+                            contact[i + 5] = Email;
                             break;
                         case 7:
                             Console.WriteLine("Enter your correct ZIP number");
-                            string ZIP = Console.ReadLine();
-                            contact[i + 6] = ZIP;
+                            string Zip = Console.ReadLine();
+                            contact[i + 6] = Zip;
                             break;
                         case 8:
                             Console.WriteLine("Enter your correct Phone number");
                             string PhoneNumber = Console.ReadLine();
                             contact[i + 7] = PhoneNumber;
                             break;
-
                         default:
                             Console.WriteLine("Please enter a valid input");
                             break;
-
                     }
                 }
             }
-            int j = 0;
-            int count = 1;
-            foreach (var item in contact)
-            {
-                if (j % 8 == 0)
-                {
-                    Console.WriteLine("\nNumber of person :" + count);
-                    Console.WriteLine("FirstName: " + contact[j]);
-                    Console.WriteLine("LastName: " + contact[j + 1]);
-                    Console.WriteLine("Address : " + contact[j + 2]);
-                    Console.WriteLine("City: " + contact[j + 3]);
-                    Console.WriteLine("State: " + contact[j + 4]);
-                    Console.WriteLine("Email: " + contact[j + 5]);
-                    Console.WriteLine("ZipCode: " + contact[j + 6]);
-                    Console.WriteLine("Phone Number: " + contact[j + 7]);
-                    count++;
-
-                }
-                j++;
-            }
-
         }
         public void DeleteContact()
         {
@@ -192,31 +160,6 @@ namespace AddressBook
                     contact.RemoveAt(i);
                 }
             }
-            int j = 0;
-            int count = 1;
-            foreach (var item in contact)
-            {
-                if (j % 8 == 0)
-                {
-                    Console.WriteLine("\n");
-                    Console.WriteLine("\n");
-
-                    Console.WriteLine("Number of person :" + count);
-                    Console.WriteLine("FirstName: " + contact[j]);
-                    Console.WriteLine("LastName: " + contact[j + 1]);
-                    Console.WriteLine("Address : " + contact[j + 2]);
-                    Console.WriteLine("City: " + contact[j + 3]);
-                    Console.WriteLine("State: " + contact[j + 4]);
-                    Console.WriteLine("Email: " + contact[j + 5]);
-                    Console.WriteLine("ZipCode: " + contact[j + 6]);
-                    Console.WriteLine("Phone Number: " + contact[j + 7]);
-                    count++;
-                }
-                j++;
-
-            }
-
-
         }
     }
 }
