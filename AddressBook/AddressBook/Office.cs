@@ -10,6 +10,7 @@ namespace AddressBook
     internal class Office
     {
         ArrayList contact = new ArrayList();
+        List<Contacts> lists = new List<Contacts>();
         public void AddingContacts()
         {
             Console.WriteLine("Enter number of Contacts:");
@@ -36,10 +37,12 @@ namespace AddressBook
                 string Email = Console.ReadLine();
 
                 Console.WriteLine("Enter the Zipcode:");
-                string Zip = Console.ReadLine();
+                int Zip = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Enter the phone number:");
-                string PhoneNumber = Console.ReadLine();
+                long PhoneNumber = Convert.ToInt32(Console.ReadLine());
+                Contacts contacts = new Contacts(FirstName, LastName, Address, City, State, Email, Zip, PhoneNumber);
+                lists.Add(contacts);
                 contact.Add(FirstName);
                 contact.Add(LastName);
                 contact.Add(Address);
@@ -127,12 +130,12 @@ namespace AddressBook
                             break;
                         case 7:
                             Console.WriteLine("Enter your correct ZIP number");
-                            string Zip = Console.ReadLine();
+                            int Zip = Convert.ToInt32(Console.ReadLine());
                             contact[i + 6] = Zip;
                             break;
                         case 8:
                             Console.WriteLine("Enter your correct Phone number");
-                            string PhoneNumber = Console.ReadLine();
+                            long PhoneNumber = Convert.ToInt32(Console.ReadLine());
                             contact[i + 7] = PhoneNumber;
                             break;
                         default:
@@ -159,6 +162,19 @@ namespace AddressBook
                     contact.RemoveAt(i);
                     contact.RemoveAt(i);
                 }
+            }
+        }
+        public void SearchPerson(string City)
+        {
+            var result = lists.FindAll(r => r.City == City);
+            Console.WriteLine("Details of people who live in city: ");
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                    "\nAddress :" + item.Address + " " + "\nCity :" + item.City + " " +
+                                    "\nState :" + item.State + " " + "\nEmail :" + item.Email + " " +
+                                    "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
             }
         }
     }

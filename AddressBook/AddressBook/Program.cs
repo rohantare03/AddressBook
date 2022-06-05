@@ -23,6 +23,7 @@ namespace AddressBook
                             Console.WriteLine("2:To View the contacts");
                             Console.WriteLine("3:To Edit the Contacts");
                             Console.WriteLine("4:To Remove a contact");
+                            Console.WriteLine("5: To search person with city name");
                             try
                             {
                                 int option1 = Convert.ToInt32(Console.ReadLine());
@@ -40,9 +41,11 @@ namespace AddressBook
                                     case 4:
                                         friend.DeleteContact();
                                         break;
-                                    case 0:
-                                        Console.WriteLine("Exit");
-                                        break;
+                                    case 5:
+                                        Console.WriteLine("Enter city");
+                                        string city = Console.ReadLine();
+                                        friend.SearchPerson(city);
+                                        continue;                                 
                                     default:
                                         Console.WriteLine("Enter a valid Input");
                                         break;
@@ -63,6 +66,7 @@ namespace AddressBook
                             Console.WriteLine("2:To View the contacts");
                             Console.WriteLine("3:To Edit the Contacts");
                             Console.WriteLine("4:To Remove a contact");
+                            Console.WriteLine("5: To search person with city name");
                             try
                             {
                                 int option1 = Convert.ToInt32(Console.ReadLine());
@@ -80,6 +84,11 @@ namespace AddressBook
                                     case 4:
                                         office.DeleteContact();
                                         break;
+                                    case 5:
+                                        Console.WriteLine("Enter city");
+                                        string city = Console.ReadLine();
+                                        office.SearchPerson(city);
+                                        continue;
                                     default:
                                         Console.WriteLine("Enter a valid Input");
                                         break;
