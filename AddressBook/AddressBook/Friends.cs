@@ -40,7 +40,7 @@ namespace AddressBook
                 int Zip = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Enter the phone number:");
-                long PhoneNumber = Convert.ToInt32(Console.ReadLine());
+                long PhoneNumber = Convert.ToInt64(Console.ReadLine());
                 Contacts contacts = new Contacts(FirstName, LastName, Address, City, State, Email, Zip, PhoneNumber);
                 lists.Add(contacts);
                 contact.Add(FirstName);
@@ -134,7 +134,7 @@ namespace AddressBook
                             break;
                         case 8:
                             Console.WriteLine("Enter your correct Phone number");
-                            long PhoneNumber = Convert.ToInt32(Console.ReadLine());
+                            long PhoneNumber = Convert.ToInt64(Console.ReadLine());
                             contact[i + 7] = PhoneNumber;
                             break;
                         default:
