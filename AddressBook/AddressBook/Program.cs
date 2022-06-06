@@ -25,7 +25,8 @@ namespace AddressBook
                             Console.WriteLine("2:To View Office contact");
                             Console.WriteLine("3:To Edit Office Contacts");
                             Console.WriteLine("4:To Remove a Office contact");
-                            Console.WriteLine("5: To search with city name");                            
+                            Console.WriteLine("5: To search with city name");  
+                            Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +51,12 @@ namespace AddressBook
                                     Console.WriteLine("Enter city");
                                     string city = Console.ReadLine();
                                     friend.SearchPerson(city);
-                                    continue;                               
+                                    continue;
+                                case 6:
+                                    Console.WriteLine("Enter state");
+                                    string State = Console.ReadLine();
+                                    friend.SearchWithState(State);
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -68,7 +74,8 @@ namespace AddressBook
                             Console.WriteLine("2:To View Office contact");
                             Console.WriteLine("3:To Edit Office Contacts");
                             Console.WriteLine("4:To Remove a Office contact");
-                            Console.WriteLine("5: To search with city name");                           
+                            Console.WriteLine("5: To search with city name");
+                            Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -93,7 +100,12 @@ namespace AddressBook
                                     Console.WriteLine("Enter city");
                                     string City = Console.ReadLine();
                                     office.SearchPerson(City);
-                                    continue;                              
+                                    continue;
+                                case 6:
+                                    Console.WriteLine("Enter state");
+                                    string State = Console.ReadLine();
+                                    office.SearchWithState(State);
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
