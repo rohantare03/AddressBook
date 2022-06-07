@@ -222,5 +222,17 @@ namespace AddressBook
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
         }
+        public void SortByCity()
+        {
+            var SortCity = lists.OrderBy(r => r.City).ToList();
+            foreach (var item in SortCity)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                "\nEmail ID :" + item.Email + " " + "\nAddress :" + item.Address + " " +
+                                "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
     }
 }

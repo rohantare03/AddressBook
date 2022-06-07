@@ -29,6 +29,7 @@ namespace AddressBook
                             Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("8: To Sort by the Person Name");
+                            Console.WriteLine("9: To Sort by City Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -65,6 +66,9 @@ namespace AddressBook
                                 case 8:
                                     friend.SortByPersonName();
                                     continue;
+                                case 9:
+                                    friend.SortByCity();
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -86,6 +90,7 @@ namespace AddressBook
                             Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("8: To Sort by the Person Name");
+                            Console.WriteLine("9: To Sort by City Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -121,6 +126,9 @@ namespace AddressBook
                                     continue;
                                 case 8:
                                     office.SortByPersonName();
+                                    continue;
+                                case 9:
+                                    office.SortByCity();
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
