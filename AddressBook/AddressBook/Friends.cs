@@ -176,7 +176,7 @@ namespace AddressBook
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
         }
-        public void SearchWithState(string State)
+        public void ViewByState(string State) 
         {
             var result = lists.FindAll(r => r.State == State);
             Console.WriteLine("Details of people who live in state :");

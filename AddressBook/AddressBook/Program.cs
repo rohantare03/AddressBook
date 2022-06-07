@@ -55,7 +55,7 @@ namespace AddressBook
                                 case 6:
                                     Console.WriteLine("Enter state");
                                     string State = Console.ReadLine();
-                                    friend.SearchWithState(State);
+                                    friend.ViewByState(State);
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
@@ -104,7 +104,7 @@ namespace AddressBook
                                 case 6:
                                     Console.WriteLine("Enter state");
                                     string State = Console.ReadLine();
-                                    office.SearchWithState(State);
+                                    office.ViewByState(State);
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
