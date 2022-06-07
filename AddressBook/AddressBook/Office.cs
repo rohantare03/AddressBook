@@ -207,9 +207,20 @@ namespace AddressBook
                                    "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
-            var results = result.Count;
-            Console.WriteLine("-----------------------------------------------------------");
+            var results = result.Count;           
             Console.WriteLine($"Total Persons in City: {City} & State: {State}: are " + results);
+        }
+        public void SortByPersonName()
+        {
+            var Sort = lists.OrderBy(r => r.FirstName).ToList();
+            foreach (var item in Sort)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                 "\nEmail ID :" + item.Email + " " + "\nAddress :" + item.Address + " " +
+                                 "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                 "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
         }
     }
 }
