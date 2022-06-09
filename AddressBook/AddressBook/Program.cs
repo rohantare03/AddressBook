@@ -30,6 +30,7 @@ namespace AddressBook
                             Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("8: To Sort by the Person Name");
                             Console.WriteLine("9: To Sort by City Name");
+                            Console.WriteLine("10: To Write and Read Details in file");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -69,6 +70,9 @@ namespace AddressBook
                                 case 9:
                                     friend.SortByCity();
                                     continue;
+                                case 10:
+                                    friend.ContactDetailsInFile();
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -91,6 +95,7 @@ namespace AddressBook
                             Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("8: To Sort by the Person Name");
                             Console.WriteLine("9: To Sort by City Name");
+                            Console.WriteLine("10: To Write and Read Details in file");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -129,6 +134,9 @@ namespace AddressBook
                                     continue;
                                 case 9:
                                     office.SortByCity();
+                                    continue;
+                                case 10:
+                                    office.ContactDetailsInFile();
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");

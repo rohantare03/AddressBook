@@ -27,5 +27,9 @@ namespace AddressBook
             this.Zip = Zip;
             this.PhoneNumber = PhoneNumber;          
         }
+        public override string ToString()
+        {
+            return "First Name : " + FirstName + "\nLast Name " + LastName + "\nAddress : " + Address + "\nCity :" + City + "\nState :" + State + "\nEmailId :" + Email + "\nZip Code :" + Zip + "\nPhone Number :" + PhoneNumber;
+        }
     }
 }

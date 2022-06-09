@@ -1,0 +1,16 @@
+First Name : Rohan
+Last Name Tare
+Address : Virar
+City :Mumbai
+State :MH
+EmailId :rohan@gmial.com
+Zip Code :401305
+Phone Number :9158499217
+First Name : Asd
+Last Name Park
+Address : Palet
+City :Kalos
+State :NY
+EmailId :ash@gmail.com
+Zip Code :400031
+Phone Number :9975061737

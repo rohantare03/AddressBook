@@ -1,0 +1,16 @@
+First Name : Rohan
+Last Name Tare
+Address : Virar
+City :Mumbai
+State :MH
+EmailId :rohan@gmail.com
+Zip Code :401305
+Phone Number :9158499217
+First Name : Rahul
+Last Name Tare
+Address : Palghar
+City :Pune
+State :ENG
+EmailId :rahul@gmial.com
+Zip Code :400001
+Phone Number :9975061737

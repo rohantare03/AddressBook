@@ -233,6 +233,21 @@ namespace AddressBook
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
         }
+        public void ContactDetailsInFile()
+        {
+            string Write = @"C:\Users\Rohan\Documents\Address Book\AddressBook\AddressBook\AddressBook\FriendAddressBook.txt";
+            using (StreamWriter streamWriter = File.AppendText(Write))
+            {
+                foreach (var item in lists)
+                {
+                    streamWriter.WriteLine(item);
+                }
+                streamWriter.Close();
+            }
+            string InputFile = @"C:\Users\Rohan\Documents\Address Book\AddressBook\AddressBook\AddressBook\FriendAddressBook.txt";
+            string file = File.ReadAllText(InputFile);
+            Console.WriteLine(file);
+        }
     }
 }
 
