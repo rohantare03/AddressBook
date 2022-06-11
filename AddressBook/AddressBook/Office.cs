@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -248,6 +250,29 @@ namespace AddressBook
             string InputFile = @"C:\Users\Rohan\Documents\Address Book\AddressBook\AddressBook\AddressBook\OfficeAddressBook.txt";
             string file = File.ReadAllText(InputFile);
             Console.WriteLine(file);
+        }
+        public void WriteandReadCSVFile()
+        {
+            string FilePath = @"C:\Users\Rohan\Documents\Address Book\AddressBook\AddressBook\AddressBook\CSV File\OfficeDetails.csv";
+            using (var writer = new StreamWriter(FilePath))
+            using (CsvWriter csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csvWriter.WriteHeader<Contacts>();
+                foreach (var item in lists)
+                {
+                    csvWriter.NextRecord();
+                    csvWriter.WriteRecord(item);
+                }
+            }
+            using (TextReader reader = new StreamReader(FilePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var Records = csv.GetRecords<Contacts>().ToList();
+                foreach (var item in Records)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
     }
 }

@@ -21,16 +21,17 @@ namespace AddressBook
                         Friends friend = new Friends();
                         do
                         {
-                            Console.WriteLine("\n1:To Add a Office Contact");
-                            Console.WriteLine("2:To View Office contact");
-                            Console.WriteLine("3:To Edit Office Contacts");
-                            Console.WriteLine("4:To Remove a Office contact");
+                            Console.WriteLine("\n1:To Add a Friend Contact");
+                            Console.WriteLine("2:To View Friend contact");
+                            Console.WriteLine("3:To Edit Friend Contacts");
+                            Console.WriteLine("4:To Remove a Friend contact");
                             Console.WriteLine("5: To search with city name");  
                             Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("8: To Sort by the Person Name");
                             Console.WriteLine("9: To Sort by City Name");
                             Console.WriteLine("10: To Write and Read Details in file");
+                            Console.WriteLine("11: To read and write in csv file");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -73,6 +74,9 @@ namespace AddressBook
                                 case 10:
                                     friend.ContactDetailsInFile();
                                     continue;
+                                case 11:
+                                    friend.WriteandReadCSVFile();
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -96,6 +100,7 @@ namespace AddressBook
                             Console.WriteLine("8: To Sort by the Person Name");
                             Console.WriteLine("9: To Sort by City Name");
                             Console.WriteLine("10: To Write and Read Details in file");
+                            Console.WriteLine("11: To read and write in csv file");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -137,6 +142,9 @@ namespace AddressBook
                                     continue;
                                 case 10:
                                     office.ContactDetailsInFile();
+                                    continue;
+                                case 11:
+                                    office.WriteandReadCSVFile();
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
